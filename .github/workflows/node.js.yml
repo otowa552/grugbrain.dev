@@ -23,3 +23,8 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npx @11ty/eleventy
+    - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          publish_dir: ./_site
+          github_token: ${{ secrets.GITHUB_TOKEN }}
