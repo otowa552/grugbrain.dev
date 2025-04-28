@@ -7,8 +7,8 @@ layout: layout.njk
     <img alt="grug" src="grug.png" style="float: left; height: 120px; margin-right: 20px; clear: both"/>
   </a>
   <h1>
-     The Grug Brained Developer<br/>
-     <small>A layman's guide to thinking like the self-aware smol brained</small>
+     原人頭の開発者<br/>
+     <small>小さな頭を自覚している人のように考えるための素人向けガイド</small>
   </h1>
 </div>
 
@@ -16,635 +16,526 @@ layout: layout.njk
 <a id="book" href="https://swag.htmx.org/collections/grug">Buy</a>
 </center>
 
-# Introduction
+# はじめに
 
-this collection of thoughts on software development gathered by grug brain developer
+ここでは原人頭の開発者がソフトウェア開発に関する考えをまとめている。
 
-grug brain developer not so smart, but grug brain developer program many long year and learn some things
-although mostly still confused
+原人頭の開発者はそれほど賢くない。長年プログラムを作り、いくつかのことを学んだが、ほとんどはまだ混乱している。
 
-grug brain developer try collect learns into small, easily digestible and funny page, not only for you, the young grug, but also for him
-because as grug brain developer get older he forget important things, like what had for breakfast or if put pants on
+原人頭の開発者は、若い原人のためだけでなく自分自身のためにも、学ぶべきことを減らし、わかりやすく面白く書こうと思う。なぜなら原人は年を取るにつれ、朝に何を食べたか、ズボンを履いたかどうかなど、大事なことまで忘れてしまうからだ。
 
-big brained developers are many, and some not expected to like this, make sour face
+賢い頭を持つ開発者は多く、その中にはこういう考えを好まない人もいるので、彼らは渋い顔をするだろう。
 
-*THINK* they are big brained developers many, many more, and more even definitely probably maybe not like this, many
-sour face (such is internet)
+自分が賢い頭を持つ開発者だと思っている、そして多分そうではない、たくさんの人がいる。それがインターネットだ。
 
-(note: grug once think big brained but learn hard way)
+(注：原人はかつて自分が賢い頭を持っていると信じていたが、苦い経験からそうでないと学んだ)
 
-is fine!
+問題ない！
 
-is free country sort of and end of day not really matter too much, but grug hope you fun reading and maybe learn from
- many, many mistake grug make over long program life
+結局は人の勝手だし一日の終りにはそれほど重要なことじゃなくなる。しかし、原人はあなたが楽しみながら読んでくれて、原人が長いプログラマー人生で犯したたくさんの間違いから学べることを祈っている。
 
-# <a name="grug-on-complexity"></a>[The Eternal Enemy: Complexity](#grug-on-complexity)
+# <a name="grug-on-complexity"></a>[永遠の宿敵：複雑さ](#grug-on-complexity)
 
-apex predator of grug is complexity
+原人平原の頂点捕食者（エイペックス・オブ・プレデター）は複雑さである。
 
-complexity bad
+複雑さは悪い。
 
-say again:
+もう一度言う。
 
-complexity *very* bad
+複雑さは*とても*悪い。
 
-_you_ say now:
+*あなた*は言う。
 
-complexity *very*, *very* bad
+複雑さは*とてもとても*悪い。
 
-given choice between complexity or one on one against t-rex, grug take t-rex: at least grug see t-rex
+複雑さ、あるいはTレックス、どちらかと相対せねばならなくなったときは、原人はTレックスを選ぶ。すくなくともTレックスは目で見ることができる。
 
-complexity is spirit demon that enter codebase through well-meaning but ultimately very clubbable non grug-brain
-developers and project managers who not fear complexity spirit demon or even know about sometime
+複雑さは、人のよい非原人頭の開発者やプロジェクトマネージャーを通じて、彼らの善意によってでありながらも、コードベースに侵入してきてしまう悪霊である。彼らは複雑さの悪霊を恐れず、時にはそれについて知らないことすらある。
 
-one day code base understandable and grug can get work done, everything good!
+ある日には、コードベースは理解できて原人は仕事を終わらせられる。すべては順調！
 
-next day impossible: complexity demon spirit has entered code and very dangerous situation!  
+次の日、仕事は不可能に陥る。複雑さの悪霊がコードに入り込み危機的な状況だ！
 
-grug no able see complexity demon, but grug sense presence in code base
+原人は複雑さの悪霊を見ることはできないが、コードベースにその存在を感じる。
 
-demon complexity spirit mocking him make change here break unrelated thing there what!?! mock mock mock ha ha so funny 
-grug love programming and not becoming shiney rock speculator like grug senior advise
+複雑さの悪霊は原人をあざ笑う。こちらでは理解不能な変化を起こし、あちらでは無関係な機能が壊れる。一体どうなっているんだ！？悪霊の笑い声を聞きながら『原人はプログラミングが好きだ、原人の古老が勧めてくるように輝くピカピカ石を投資して生計を立てるようにはなりたくはない……』と考える。
 
-club not work on demon spirit complexity and bad idea actually hit developer who let spirit in with club: sometimes grug
-himself!
+頼りのこん棒は複雑さの悪霊を捉えられず、その悪霊を侵入させた開発者をぶん殴ろうという悪い考えにしかならない。ときにそのこん棒の対象は原人自身である！
+残念ながら、そう、しばしば原人自身なのだ！
 
-sadly, often grug himself
+だから、原人はまた言う、何度も言う。
+複雑さは*とてもとても*悪い。
 
-so grug say again and say often: complexity *very*, *very* bad
+## <a name="grug-on-saying-no"></a>[ノーと言う](#grug-on-saying-no)
 
-## <a name="grug-on-saying-no"></a>[Saying No](#grug-on-saying-no)
+複雑さの悪霊に対する最強の武器は魔法の言葉『ノー』だ。
 
-best weapon against complexity spirit demon is magic word: "no"
+「ノー、原人はその機能を作らない」
 
-"no, grug not build that feature"
+「ノー、原人はその抽象化をしない」
 
-"no, grug not build that abstraction"
+「ノー、原人は毎日水浴びしたり、黒い液体を飲む量を減らしたりしない。その話はもうやめて」
 
-"no, grug not put water on body every day or drink less black think juice you stop repeat ask now"
+注：これは良いエンジニアリングのためのアドバイスであって、キャリアのためのアドバイスではない。『イエス』はより多くの輝くピカピカ石を得るための魔法の言葉であり、あなたを大きな開発部族の首長にしてくれる。
 
-note, this good engineering advice but bad career advice: "yes" is magic word for more shiney rock and put in
-charge of large tribe of developer
+悲しい真実だが『イエス』を学び、失敗したときに他の原人に責任転嫁する方法を学ぶのが理想的なキャリアのためのアドバイスだ。
 
-sad but true: learn "yes" then learn blame other grugs when fail, ideal career advice
+しかし、原人は原人たちに真摯であるべきだ。『ノー』は原人における魔法である。最初のうちは言うのは難しい。特に優しい原人で他人をがっかりさせたくない場合(そんな原人はたくさんいる)。でも、時間がたつにつれて言うのは簡単になる。たとえ、得られるピカピカ石の量がそうすることで減ったとしても。
 
-but grug must to grug be true, and "no" is magic grug word.  Hard say at first, especially if you nice grug and don't like
-disappoint people (many such grugs!) but  easier over time even though shiney rock pile not as high as might otherwise be
+心配するな。原人は本当にそんなにたくさんのピカピカ石が必要なのだろうか？
 
-is ok: how many shiney rock grug really need anyway?
+## <a name="grug-on-saying-ok"></a>[オーケーと言う](#grug-on-saying-ok)
 
-## <a name="grug-on-saying-ok"></a>[Saying ok](#grug-on-saying-ok)
 
-sometimes compromise necessary or no shiney rock, mean no dinosaur meat, not good, wife firmly remind grug
-about young grugs at home need roof, food, and so forth, no interest in complexity demon spirit rant by grug for
-fiftieth time
+時々は妥協が必要だ。ピカピカ石がないと、恐竜の肉も買えない。まずい、妻は家にいる若い原人が屋根や食べ物、その他もろもろが必要だということを原人に言って聞かせる。複雑さの悪霊についての愚痴には興味がない。それを聞くのは五十回目だ。
+そういう状況では、『オーケー』と言うことを勧めたい。
 
-in this situation, grug recommend "ok"
+「オーケー、原人はその機能を作る」
 
-"ok, grug build that feature"
+それから原人は時間をかけて[『80/20ソリューション』](https://ja.wikipedia.org/wiki/%E3%83%91%E3%83%AC%E3%83%BC%E3%83%88%E3%81%AE%E6%B3%95%E5%89%87)を考える。
+『80/20ソリューション』とは「機能は80%、コードは20%」というものだ。その解決策はプロジェクトマネージャーが望むすべてのベルやホイッスルを持っていないかもしれないし、少し醜いかもしれない。だが動くし、生産性が最も高く、複雑さの悪霊をほとんど部分で抑える。
 
-then grug spend time think of [80/20 solution](https://en.wikipedia.org/wiki/Pareto_principle) to problem and build that instead.  
-80/20 solution say "80 want with 20 code"  solution maybe not have all bell-whistle that project manager want, maybe a 
-little ugly, but work and deliver most value, and keep demon complexity spirit at bay for most part to extent
+ときには、プロジェクトマネージャーに何も言わずに『80/20ソリューション』を取ることが最善かもしれない。許可を得ることより許容される方が簡単だ。プロジェクトマネージャーは多くの問題に対処していて、心はチョウのように移ろいやすい。何の機能を実装すべきか、または進むべきか戻るべきか、原人をクビにした方がよいか、そういったことをしばしば忘れる。そのようなケースをたくさん見ている。
 
-sometimes probably best just not tell project manager and do it 80/20 way.  easier forgive than permission, project managers
-mind like butterfly at times overworked and dealing with many grugs.  often forget what even feature supposed to do or move on or 
-quit or get fired grug see many such cases
+とにかく、プロジェクトマネージャーの利益にはかなっているので、あまり気にする必要はないだろう。
 
-anyway is in project managers best interest anyway so grug not to feel too bad for this approach usually
+## <a name="grug-on-factring-your-code"></a>[コードをファクタリングする](#grug-on-factring-your-code)
 
-## <a name="grug-on-factring-your-code"></a>[Factoring Your Code](#grug-on-factring-your-code)
+コードベースをいかに分けるべきか（しゃれた言い方では『どのようにコードを適切にファクタするか』）、その戦略を立てるのは難しい。ここでは汎用的なアドバイスはできない。なぜなら、各システムで非常に異なるからだ。しかし、原人が信じるただ一つのことがある。アプリケーションを早すぎる段階で分割しないこと！
 
-next strategy very harder: break code base up properly (fancy word: "factor your code properly")  here is hard give general
-advice because each system so different.  however, one thing grug come to believe: not factor your application too early!
+プロジェクトの初期段階では、すべてが非常に抽象的で水の中にいるようだ。原人にはつかむためのワラもない。システムを開発するための『形』を作って自分が何をしているのかわかるには時間がかかる。原人はプロジェクトの最初のうちは分解を考慮にしないようにすると、ある時点で、良い分割点がコードベースから現る。
 
-early on in project everything very abstract and like water: very little solid holds for grug's struggling brain to hang 
-on to.  take time to develop "shape" of system and learn what even doing.  grug try not to factor in early part of project
-and then, at some point, good cut-points emerge from code base
+良い分割点は、システムの他の部分とインターフェイスが狭い。中に複雑さの悪霊をクリスタルで封じめてくれるようないくつかの関数や抽象化がある。
 
-good cut point has narrow interface with rest of system: small number of functions or abstractions that hide complexity
-demon internally, like trapped in crystal
+原人は、複雑さの悪霊をクリスタルに封印できたとき、とても爽快だ。宿敵を捕らえられて非常に満足している！
 
-grug quite satisfied when complexity demon trapped properly in crystal, is best feeling to trap mortal enemy!
+原人は分割点がコードから現れるのを辛抱強く待ち、時間経過とともにコードベースが形になっていく中、徐々にリファクタリングをする。そのための厳密なルールはない。原人はただ見る技術を磨き、分割点の出現を悟るための時間をかけるだけだ。忍耐だ。
 
-grug try watch patiently as cut points emerge from code and slowly refactor, with code base taking shape over time along
-with experience.  no hard/ fast rule for this: grug know cut point when grug see cut point, just take time to build 
-skill in seeing, patience
+時々、急ぎすぎ間違った抽象化をしてしまうので、辛抱強さが必要になる。
 
-sometimes grug go too early and get abstractions wrong, so grug bias towards waiting
+賢い頭を持つ開発者は待つことを好まないことが多く、プロジェクトの初期に多くの抽象化を考案してくる。
 
-big brain developers often not like this at all and invent many abstractions start of project
+原人はこん棒を手に取り「賢い頭はコードを保守する気がない！次の設計会議でも開いてコードは原人に任せろ！」と叫びたくなる。
 
-grug tempted to reach for club and yell "big brain no maintain code!  big brain move on next architecture committee
-leave code for grug deal with!"
+しかし、原人は衝動を抑える術を学んでいる。原人と動物の大きな違いだ。
 
-but grug learn control passions, major difference between grug and animal
+その代わりに、UML図のようなものを与えたり（コードに傷を与えないし、どうせ捨てられる可能性が高い）、あしたの朝までに動かせるデモを依頼したりする。そうして、プロジェクトの初期段階における賢い頭の開発者からのダメージを抑えようとする。
 
-instead grug try to limit damage of big brain developer early in project by giving them thing like
-UML diagram (not hurt code, probably throw away anyway) or by demanding working demo tomorrow
+動かせるデモは良いトリックだ。賢い頭に実際に動くものを作らせて、そのコードを見たり話し合ったりすることで、現実を早く理解させるのに役立つ。
 
-working demo especially good trick: force big brain make something to actually work to talk about and code to look at that do
-thing, will help big brain see reality on ground more quickly
+心にとめておくべきだ！賢い頭は賢い頭を持っている。それは善のために使われるべきで、複雑さの悪霊が支配するサービスのために使われるべきではない。そういうことを何度も見てきた。
 
-remember!  big brain have big brain!  need only be harness for good and not in service of spirit complexity demon on 
-accident, many times seen
+（最善の原人は、たくさんの賢い頭を正しい方向に導き、たくさんの複雑さの悪霊を封印したクリスタルを作り出せる。そんな原人には待っている！輝くピカピカ石の山！）
 
-(best grug brain able to herd multiple big brain in right direction and produce many complexity demon trap crystals, large
-shiney rock pile awaits such grug!)
+デモによる手法は「プロトタイプ」と呼ぶこともある。プロジェクトマネージャーには洗練された響きのように聞こえるだろう。
 
-also sometimes call demo approach "prototype", sound fancier to project manager
+原人は開発の初期に『プロトタイプ』と叫ぶ、多くの賢い頭がある場合。
 
-grug say prototype early in software making, _especially_ if many big brains
+# <a name="grug-on-testing"></a>[テスト](#grug-on-testing)
 
-# <a name="grug-on-testing"></a>[Testing](#grug-on-testing)
+原人はテストと愛憎関係を持っている。テストは原人を何度も何度も救ってくれた。テストを愛しているし、尊重もしている。
 
-grug have love/hate relationship with test: test save grug many, many uncountable time and grug love and respect test  
+残念ながら、多くのテストシャーマンが存在する。一部のテストシャーマンはテスト偶像を作り、原人がコードを書きドメインが何かわかる前に「原初のテスト」のようなものを求める。 
 
-unfortunately also many test shamans exist.  some test shaman make test idol, demand things like "first test" before grug
-even write code or have any idea what grug doing domain!  
+原人はドメインが何かまだわかっていないのに、どうやってテストをするのだろう！？
 
-how grug test what grug not even understand domain yet!?
+「案ずるな。テストがお前に何をすべきか指し示してくれるだろう」
 
-"Oh, don't worry: the tests will show you what you need to do."
+原人はまたこん棒に手を伸ばそうとする衝動にかられるが、なんとか冷静さを保つ。
 
-grug once again catch grug slowly reaching for club, but grug stay calm
+原人はプロトタイプ段階の後にコードが固まってきたころ、大部分のテストを書く。
 
-grug instead prefer write most tests after prototype phase, when code has begun firm up
+しかし、注意すべきだ。原人はここで規律を保たなければならない！
 
-but, note well: grug must here be very disciplined!  
+「原人のマシンでは動く」といってテストを書かないで進むことは簡単だ！
 
-easy grug to move on and not write tests because "work on grugs machine"!
+これは非常に良くない。他のマシンで動作する保証はなく、今後も原人のマシンで動作する保証もない。
 
-this very, very bad: no guarantee work on other machine and no guarantee work on grug machine in future, many times
+テストシャーマンはテストの重要性については良い点を捉えているが、しばしば人生に必要な肝心の機能を完成させてくれず、常にテストにとらわれていることが多い。こん棒の餌食に値するが、心を正しい場所に保つべきだ。
 
-test shaman have good point on importance of test, even if test shaman often sometimes not complete useful
-feature in life and talk only about test all time, deserve of club but heart in right place
+また、テストシャーマンは単体テストについて話したがるが、原人はそれがあまり有用でないと思っている。原人の経験では、理想的なテストは単体テストでもE2Eテストでもなく、その中間のテストだ。
 
-also, test shaman often talk unit test very much, but grug not find so useful.  grug experience that ideal tests are not 
-unit test or either end-to-end test, but in-between test
+[**単体テスト**](https://ja.wikipedia.org/wiki/%E5%8D%98%E4%BD%93%E3%83%86%E3%82%B9%E3%83%88) 分かった、いいだろう。しかし実装が変更されれば壊れる（APIと比べても多く！）。そして、リファクタリングを困難にする。実際のところ、多くのバグはコードと他のコードとの相互作用によるものだ。コードが変更されれば、しばしば無駄になる。
 
-[unit tests](https://en.wikipedia.org/wiki/Unit_testing) fine, ok, but break as implementation change (much compared api!)
-and make refactor hard and, frankly, many bugs anyway often due interactions other code.  often throw away when code change.  
+原人はプロジェクトの開始段階で単体テストを書く。物事を進めるには役に立つが、執着すべきではなく、長期的な価値を期待すべきではない。
 
-grug write unit test mostly at start of project, help get things going but not get too attached or expect value long time
+[**E2Eテスト**](https://smartbear.com/learn/automated-testing/what-is-end-to-end-testing/) テストが通ったときは、全体のシステムが機能していることを示している。しかし！通らなかったときはどうなっているのか理解するのは難しく、原人をいつもイライラさせる。時々、原人は「あー、こいつはいつも失敗する」と無視してしまう。とても悪い！
 
-[end to end](https://smartbear.com/solutions/end-to-end-testing/) tests good, show whole system work, but! hard to 
-understand when break and drive grug crazy very often, sometimes grugs just end up ignoring because "oh, that break all 
-time"  very bad!
+**中間のテスト** テストの合間、原人の耳にシャーマンの呼び声が響く。『[統合テスト](https://en.wikipedia.org/wiki/Integration_testing)……』。
+しばし、酸っぱい顔になってしまうが、しかし、原人は統合テストこそ甘露であると言いたい。システムの正確性をテストするには十分高水準であり、どこが壊れているか簡単に調べることができる良いデバッグ機能を持つぐらいには低水準である。
 
-in-between tests, grug hear shaman call ["integration tests"](https://en.wikipedia.org/wiki/Integration_testing) sometime 
-often with sour look on face. but grug say integration test sweet spot according to grug: high level enough test correctness 
-of system, low level enough, with good debugger, easy to see what break
+原人は最初の段階ではいくつかの単体テストを実施するスタイルを好むが、すべてのコードを100%テストするわけではなく、確実に「原初のテスト」ではない。「途中からテストする」ことは、原人の理解が進むにつれ、原人にとってかなりうまく機能する。
 
-grug prefer some unit tests especially at start but not 100% all code test and definitely not "first test".  "test along
-the way" work pretty well for grug, especially as grug figure things out
+原人は統合テストに一所懸命に取り組みにつれ、分割点が現れシステムは安定する！分割点のAPIでは実装と統合テストが長い間にわたって維持されることが期待できる。そして、デバッグが簡単だ。
 
-grug focus much ferocious integration test effort as cut point emerge and system stabilize!  cut point api hopefully stable
-compared implementation and integration test remain valuable many long time, and easy debug
+また、小さく、よく整理されたE2Eテスト群が作成され、こん棒の痛みの下でひたむきに機能し続けるように保守される。E2Eテストの焦点は、UIの汎用的なパーツといくつかの重要なエッジケースにあるが、あまり数が多くはなく、維持が不可能になり無視されてしまうほどではない。
 
-also small, well curated end-to-end test suite is created to be kept working religiously on pain of clubbing. focus of important 
-end-to-end test on most common UI features and few most important edge cases, but not too many or become impossible maintain
-and then ignored
+これが原人にとって理想的なテストセットだ。
 
-this ideal set of test to grug
+気に入らなくても、これが原人テストの目指すべきところである。
 
-you may not like, but this peak grug testing
+また、原人は[モック](https://ja.wikipedia.org/wiki/%E3%83%A2%E3%83%83%E3%82%AF%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88)がテストで使われるのを嫌う。絶対に必要な場合（まれに／決して）を除いて使うべきではないし、粗い粒度でその時のみのモッキング（切断点／システム）に留めるべきだ。
 
-also, grug dislike [mocking](https://en.wikipedia.org/wiki/Mock_object) in test, prefer only when absolute necessary
-to (rare/never) and coarse grain mocking (cut points/systems) only at that
+原人が嫌がる「原初のテスト」の例外は、バグが見つかったときだ。原人はまず回帰テストでバグを再現してから修正する。なぜかこの場合だけはうまくいく。
 
-one exception "first test" dislike by grug: when bug found.  grug always try first reproduce bug with regression test 
-_then_ fix bug, this case only for some reason work better
+# <a name="grug-on-agile"></a>[アジャイル開発](#grug-on-agile)
 
-# <a name="grug-on-agile"></a>[Agile](#grug-on-agile)
+原人が思うにアジャイル開発は悪くない。良くもない。
 
-grug think agile not terrible, not good
+結局のところ、開発を整理する最悪の方法ではなく、他の方法よりは良いかもしれないと原人は考えている。
 
-end of day, not worst way to organize development, maybe better than others grug supposes is fine
+しかし、危険なのはアジャイルシャーマンだ！たくさんのピカピカ石がアジャイルシャーマンによって失われた！
 
-danger, however, is agile shaman!  many, many shiney rock lost to agile shaman!
+アジャイル開発のプロジェクトが失敗するたびに、アジャイルシャーマンは「お前らはアジャイルを正しくやっていない！」と言う。もっとピカピカ石を求めて、若い原人たちにアジャイルを教え込み続けられることができるので、これがアジャイルシャーマンにとって非常に都合が良いことに原人は気付く。危険だ！
 
-whenever agile project fail, agile shaman say "you didn't do agile right!"  grug note this awfully convenient for agile
-shaman, ask more shiney rock better agile train young grugs on agile, danger!
+原人はあまりにもアジャイルの会議が多くなるとこん棒を取り出したくなるが、なんとか気を落ち着かせる。
 
-grug tempted reach for club when too much agile talk happen but always stay calm
+プロトタイピング、ツール、そして良い原人を雇うことが、成功するソフトウェア開発の鍵だ。アジャイルプロセスは助けになるが、ときに真剣に受け止めすぎると害を及ぼすこともある。
 
-prototyping, tools and hiring good grugs better key to success software: agile process ok and help some but sometimes hurt taken
-too seriously
+原人は言う、
+「[銀のこん棒はない](https://ja.wikipedia.org/wiki/%E9%8A%80%E3%81%AE%E5%BC%BE%E3%81%AA%E3%81%A9%E3%81%AA%E3%81%84)」
 
-grug say [no silver club](https://en.wikipedia.org/wiki/No_Silver_Bullet) fix all software problems no matter what agile
-shaman say (danger!)
+アジャイルシャーマンが何と言おうと、すべての開発上における問題を解決することはできない。（危険だ！）
 
-# <a name="grug-on-refactoring"></a>[Refactoring](#grug-on-refactoring)
+# <a name="grug-on-refactoring"></a>[リファクタリング](#grug-on-refactoring)
 
-refactoring fine activity and often good idea, especially later in project when code firmed up
+リファクタリングは特にプロジェクト後半でコードが固まってきたときには、良い取り組みでありしばしば良いアイディアを生む。
 
-however, grug note that many times in career "refactors" go horribly off rails and end up causing more harm than good
+しかし、原人はキャリアの中で「リファクタリング」がひどく脱線し、良い結果よりも悪い結果を引き起こすことが多いことに気付いた。
 
-grug not sure exactly why some refactors work well, some fail, but grug notice that larger refactor, more
-likely failure appear to be
+原人には、なぜいくつかのリファクタリングが成功し、いくつかが失敗するのか正確にはわからないが、リファクタリングの規模が大きくなるほど失敗する可能性が高くなる。
 
-so grug try to keep refactors relatively small and not be "too far out from shore" during refactor.  ideally system work
-entire time and each step of finish before other begin.  
+原人はリファクタリングを小規模に留め、その最中に「沖に流されない」ようにしようとしている。理想的には、システムが常に機能し、他の作業が始まる前に各ステップを完了させるべきだ。
 
-end-to-end tests are life saver here, but often very hard understand why broke... such is refactor life.
+E2Eテストがここでの命綱だが、動作しない理由を探るのは非常に難しいことがよくある……それがリファクタリングというものだ。
 
-also grug notice that introducing too much abstraction often lead to refactor failure and system failure.  good example
-was [J2EE](https://www.webopedia.com/definitions/j2ee/) introduce, many big brain sit around thinking too much abstraction, nothing good came of it many project hurt
+また、原人は過渡の抽象化を導入すると、リファクタリングやシステムが失敗につながることが多いと考える。例をあげると、[J2EE](https://www.webopedia.com/definitions/j2ee)は導入することで、多くの賢い頭が過渡の抽象化について考えすぎて何も成果を挙げられず、たくさんのプロジェクトに打撃を与えた。
 
-another good example when company grug work for introduce [OSGi](https://www.techtarget.com/searchnetworking/definition/OSGi) to help 
-manage/trap spriit complexity demon in code base.  not only OSGi not help, but make complexity demon much more powerful!
-took multiple man year of best developers to rework as well to boot!  more complex spirit and now features impossible 
-implement! very bad!
+もう一つ、例を挙げる。原人はコードベース内の複雑さの悪霊を管理／捕らえるために、会社で[OSGi](https://www.techtarget.com/searchnetworking/definition/OSGi)を導入した。OSGiは役立つどころか、複雑さの悪霊をより強力にしてしまった！改修には最高の開発者たちで数年かかった！より強い複雑さの悪霊が現れ、今では実装は不可能な機能が増えた！非常に悪い！
 
-# <a name="grug-on-chestertons-fence"></a>[Chesterton's Fence](#grug-on-chestertons-fence)
+# <a name="grug-on-chestertons-fence"></a>[チェスタトンのフェンス](#grug-on-chestertons-fence)
 
-wise grug shaman [chesterton](https://en.wikipedia.org/wiki/G._K._Chesterton) once say 
+英知ある原人のシャーマン、[G・K・チェスタトン](https://ja.wikipedia.org/wiki/G%E3%83%BBK%E3%83%BB%E3%83%81%E3%82%A7%E3%82%B9%E3%82%BF%E3%83%88%E3%83%B3)はかつてこう言った
 
-> here exists in such a case a certain institution or law; let us say, for the sake of simplicity, a fence or gate erected across a road. The more modern type of reformer goes gaily up to it and says, “I don’t see the use of this; let us clear it away.” To which the more intelligent type of reformer will do well to answer: “If you don’t see the use of it, I certainly won’t let you clear it away. Go away and think. Then, when you can come back and tell me that you do see the use of it, I may allow you to destroy it.”
+> ある制度や法律があります。簡単にするために例えましょう、道路に設置されたフェンスやゲートがあります。現代的な改革者が陽気な顔でやってきて、こう言います。「これは何の役に立っているのかわからないので、無くしましょう」それに対して、より知的なタイプの改革者ならこう言うでしょう。「それが何の役に立つのかあなたがわからないのなら、私はそれを無くすことに同意しません。一旦、戻って考えてきてください。それが何の役に立つかわかって帰ってきたら、無くすことに同意できるかもしれません」
 
-many older grug learn this lesson well not start tearing code out willy nilly, no matter how ugly look
+多くの年配の原人は、この教訓をよく学び、どんなに醜く見えてもコードをむやみに引き裂かないようにする。
 
-grug understand all programmer platonists at some level wish music of spheres perfection in code.  but danger is here,
-world is ugly and gronky many times and so also must code be
+原人はすべてのプラトン主義のプログラマーが[球体の奏でる音楽](https://en.wikipedia.org/wiki/Musica_universalis)の完璧さをコードに求めていることを知っている。しかし、そこには危険が潜む。世界は醜く、グロテスクであることが多い。コードもそうであるべきだろう。
 
-humility not often come big brained or think big brained 
-easily or grug even, but grug often find "oh, grug no like look of this, grug fix" lead many hours pain grug and no better or system
-worse even
+賢い頭を持つ人や、自身が賢い頭であると簡単に考える人、あるいは原人でさえ謙虚さをしばしば忘れ、「おお、原人はこの見た目が好きではない。修正する」と考えてしまうことは多い。時間の浪費を引き起こし、システムは良くならず、返って悪化することすらある。
 
-grug early on in career often charge into code base waving club wildly and smash up everything, learn not good
+原人はキャリアの初期に、こん棒を振り回しながらコードベースに突入し、すべてを台無しにしてしまった経験を積み、それが良くないことを学んだ。
 
-grug not say no improve system ever, quite foolish, but recommend take time understand system first especially bigger system is and
-is respect code working today even if not perfect
+原人はシステムを改善することを否定しない。愚かに見えるが、特にシステムが大きい場合は、システムを理解するための時間を取ることを勧める。そして、たとえ完璧でなくても、今機能しているコードを尊重すべきだ。
 
-here tests often good hint for why fence not to be smashed!
+そこではテストが「なぜフェンスを壊してはいけないか」の良いヒントになるだろう！
 
-# <a name="grug-on-microservices"></a>[Microservices](#grug-on-microservices)
+# <a name="grug-on-microservices"></a>[マイクロサービス](#grug-on-microservices)
 
-grug wonder why big brain take hardest problem, factoring system correctly, and introduce network call too
+なぜ賢い頭が、システムの分割やネットワーク呼び出しといった最も難しい問題を導入するのか、原人は不思議に思う。
 
-seem very confusing to grug
+原人には非常に混乱しているように見える。
 
-# <a name="grug-on-tools"></a>[Tools](#grug-on-tools)
+# <a name="grug-on-tools"></a>[ツール](#grug-on-tools)
 
-grug love tool.  tool and control passion what separate grug from dinosaurs!  tool allow grug brain to create code that 
-not possible otherwise by doing thinking for grug, always good relief! grug always spend time in new place learning 
-tools around him to maximize productivity: learn tools for two weeks make development often twice faster and often
-have dig around ask other developers help, no docs
+原人はツールが大好きだ。ツールとコントロールへの情熱が原人と恐竜を分ける！ツールは他では不可能なコードを作成することを可能にする。常に助けになる！原人は新しい場所に行くと、生産性を最大化するため、常に周りからツールを学ぶ。二週間ツールを学ぶことで開発は二倍早くなる。他の開発者の助けを得ることで使い方を掘り下げることができる。たとえドキュメントがなくても。
 
-code completion in IDE allow grug not have remembered all API, very important!  
+原人がすべてのAPIを覚えておかずに済むようにしてくれるので、IDEのコード補完はとても重要だ！
+それなしでJavaプログラミングは原人にはほぼ不可能だ！
+真の意味で考えるための時間をくれる。
 
-java programming nearly impossible without it for grug!
+良いデバッグ機能はピカピカ石と同じ重さの価値がある、いや実際はそれ以上だ。バグに直面したとき、原人はすべてのピカピカ石とときには子供数人さえ差し出してでも良いデバッグ機能を手に入れようとするだろう。まあ原人の知る限りでは、そもそもデバッグ機能に重さなんてない。
 
-really make grug think some time
+原人は新しいプログラマーに利用可能なデバッグ機能を深く学ぶことをいつも勧める。条件付きブレークポイント、式評価、スタックナビゲーションなどの機能は、新しい原人に大学の授業よりもコンピュータについて多くを教えてくれるだろう！
 
-good debugger worth weight in shiney rocks, in fact also more: when faced with bug grug would often trade all shiney rock and
-perhaps few children for good debugger and anyway debugger no weigh anything far as grug can tell  
+原人は言う、ツールの改善を常に怠るな、と。
 
-grug always recommend new programmer learn available debugger very deeply, features like conditional break points, expression
-evaluation, stack navigation, etc teach new grug more about computer than university class often!
+# <a name="grug-on-type-systems"></a>[型](#grug-on-type-systems)
 
-grug say never be not improving tooling
+原人は型がとても好きだ。プログラミングを簡単にしてくれる。原人にとって型の価値は、キーボードでドットを打ったときに、原人ができることのリストが魔法のようにポップアップすることだ。これが型の九割以上の価値だ。
 
-# <a name="grug-on-type-systems"></a>[Type Systems](#grug-on-type-systems)
+賢い頭の型シャーマンは、型の正確性こそが要点だと言うことが多いが、原人は賢い頭の型シャーマンがコードをあまり配信していないことに気付いている。配信されないコードはある意味で正確と言えるかもしれないが、原人が「正確」というときに指すものとは別のものだ。
 
-grug very like type systems make programming easier.  for grug, type systems most value when grug hit dot on keyboard and
-list of things grug can do pop up magic.  this 90% of value of type system or more to grug
+原人はツールの魔法でできるコードの完成度こそが型の利点であると言いたい。正確性も良いものではあるが、それほど重要ではない。
 
-big brain type system shaman often say type correctness main point type system, but grug note some big brain type system 
-shaman not often ship code.  grug suppose code never shipped is correct, in some sense, but not really what grug mean
-when say correct
+賢い頭たちには注意が必要だ！
 
-grug say tool magic pop up of what can do and complete of code major most benefit of type system, correctness also good but not 
-so nearly so much
+ひとかたの賢い頭は型について考え、律[(レンマ)](https://ja.wikipedia.org/wiki/%E3%83%AC%E3%83%B3%E3%83%9E)で話す。脅威が迫る！
 
-also, often sometimes caution beware big brains here!
+危険な抽象化が高まりすぎる。ビッグブレイン型システムのコードはプラトニックな汎用チューリング計算モデルのアーストラル投影と化し、コードベースに侵入する。ある程度の優雅さは認めるが、めまいを禁じ得ない。原人社にとっての当面の課題はこん棒在庫管理のような実用的な作業であって、それには全く適さないのだ。
 
-some type big brain think in type systems and talk in lemmas, potential danger!
+ここでのジェネリクスは特に危険だ。原人は値を出力するほとんどのコンテナクラスではジェネリクスを制限すべきだと考える。
+ジェネリクスの誘惑は強く、目を曇らせる！悪魔はジェネリクスが大好きだ！注意しろ！
 
-danger abstraction too high, big brain type system code become astral projection of platonic generic turing model of 
-computation into code base.  grug confused and agree some level very elegant but also very hard do anything like 
-record number of club inventory for Grug Inc. task at hand
+型は常に利益を生む。ドットを打って何が出来るのか見るということを決して忘れないでほしい！
 
-generics especially dangerous here, grug try limit generics to container classes for most part where most value add
+# <a name="grug-on-expression-complexity"></a>[式の複雑さ](#grug-on-expression-complexity)
 
-temptation generics very large is trick!  spirit demon complex love this one trick! beware!
-
-always most value type system come: hit dot see what grug can do, never forget!
-
-# <a name="grug-on-expression-complexity"></a>[Expression Complexity](#grug-on-expression-complexity)
-
-grug once like to minimize lines of code much as possible.  write code like this:
+原人もかつては可能な限りコードの行数を最小化したいと思っていた。例えば、こんなふうなコードを書いていた：
 
 ```js
   if(contact && !contact.isActive() && (contact.inGroup(FAMILY) || contact.inGroup(FRIENDS))) {
-    // ...
+  // ...
   }
 ```
 
-over time grug learn this hard debug, learn prefer write like so:
+時間がたつにつれてこれはデバッグが難しいことを学び、このように書くようになった：
 
 ```js
   if(contact) {
     var contactIsInactive = !contact.isActive();
     var contactIsFamilyOrFriends = contact.inGroup(FAMILY) || contact.inGroup(FRIENDS);
     if(contactIsInactive && contactIsFamilyOrFriends) {
-        // ...
+    // ...
     }
   }
 ```
 
-grug hear screams from young grugs at horror of many line of code and pointless variable and grug prepare defend self with club
+多くのコード行と無意味な変数に戦慄する若い原人の雄たけびを聞き、原人はこん棒で身を守る構えをする。
 
-club fight start with other developers attack and grug yell: "easier debug!  see result of each expression more clearly and good name!  easier
-understand conditional expression!  EASIER DEBUG!"
+こん棒の戦いが始まり原人は叫ぶ、「デバッグはこっちのほうが簡単だ！式の結果が明確で、わかりやすい命名！条件式を理解しやすくなる！デバッグ、カンタン！」
 
-definitely easier debug and once club fight end calm down and young grug think a bit, they realize grug right
+こん棒の戦いが終わると、若い原人も少し考えて、こっちのほうが正しいことに気付く。
 
-grug still catch grug writing code like first example and often regret, so grug not judge young grug
+原人もまだ最初のように書いてしまうことがあり、しばしば後悔するので、若い原人を批判はしない。
 
 # <a name="grug-on-dry"></a>[DRY](#grug-on-dry)
 
-[DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) mean Don't Repeat Self, powerful maxim over mind of most
-developers
+[DRY](https://ja.wikipedia.org/wiki/Don%27t_repeat_yourself)とは「Don't Repeat Yourself(自身を繰り返すな)」という意味で、ほとんど開発者が肝に銘じている格言だ。
 
-grug respect DRY and good advice, however grug recommend balance in all things, as gruggest big brain aristotle recommend
+原人はDRYに敬意を払うが、賢者アリストテレスが中庸を重んじたように、何事もバランスを取ることを勧める。
 
-grug note humourous graph by Lea Verou correspond with grug passion not repeat:
-
+原人は以下のリー・ヴァローによる図が「繰り返さない」というプログラマーの情熱に対応していることに注意を促したい。
 <img alt="code concerns over time" src="over-time.png" style="width: 100%; clear: both"/>
+<small>
+**訳注：**  
+Code readability 可読性  
+Does it actually work 実際に機能するのか？
+</small>
 
-over time past ten years program grug not as concerned repeat code.  so long as repeat code simple enough and obvious 
-enough, and grug begin feel repeat/copy paste code with small variation is better than many callback/closures passed arguments
-or elaborate object model: too hard complex for too little benefit at times
+プログラミング経験が十年を超えたあたりで、原人はコードの繰り返しをそれほど気にしなくなった。
 
-hard balance here, repeat code always still make grug stare and say "mmm" often, but experience show repeat code
-sometimes often better than complex DRY solution
+繰り返しコードが十分にシンプルで明白である限り、コピペしてちょっと書き換える方が、多くのコールバック／クロージャを渡される引数や複雑なオブジェクトモデルよりも良いと考え始めた。あまりに少ないメリットに対し、ときに複雑すぎる。
 
-note well!  grug encourage over literal developer not take does work line too serious, is joke
+ここでのバランスは難しい。つい繰り返しコードをじっと見つめて、ちょっと考えてしまうが、繰り返しコードはしばしば複雑なDRYの解決策よりも良いと経験から示されている。
 
-# <a name="grug-on-soc"></a>[Separation of Concerns (SoC)](#grug-on-soc)
+原人は開発者があまり決まり文句を真剣に受け止め過ぎないことを勧める。ジョークのようなものだ。心に留めてほしい！
+
+# <a name="grug-on-soc"></a>[関心の分離（SoC）](#grug-on-soc)
 
 [Separation of Concern (SoC)](https://en.wikipedia.org/wiki/Separation_of_concerns) another powerful idea over many developer
-mind, idea to separate different aspects of system into distinct sections code
 
-canonical example from web development: separation of style (css file), markup (html file) and logic (javascript file)
+[関心の分離（SoC）](https://ja.wikipedia.org/wiki/%E9%96%A2%E5%BF%83%E3%81%AE%E5%88%86%E9%9B%A2)とは、多くの開発者の心を捉えている強力な概念であり、システムの異なる側面を個別のコードセクションに分割するというアイディアだ。<br>
+ウェブ開発の標準的な例：スタイル（css）、マークアップ（html）、およびロジック（javascript）の分離
 
-here grug much more sour faced than DRY and in fact write big brained essay on alternative design principle
-[locality of behavior (LoB)](https://htmx.org/essays/locality-of-behaviour/) against SoC
+DRYのときよりも苦い顔になってしまう。原人はSoCに対する現実的な代替設計原則である[振る舞いの局所性（LoB）](https://htmx.org/essays/locality-of-behaviour/)について賢い頭のようなエッセイを書いている。
 
-grug much prefer put code on the thing that do the thing.  now when grug look at the thing grug know the thing what the
-thing do, alwasy good relief!
+原人は機能する場所にコードをそのまま置くことを好む。それを見れば、何をしているか一目でわかる。わかりやすい。
 
-when separate of concern grug must often all over tarnation many file look understand what how button do, much confuse 
-and time waste: bad!
+関心の分離があると、ボタンがどう機能するかすべてのファイルを見て理解しなければならない。非常に混乱し、時間が無駄になる。よくない！
 
-# <a name="grug-on-closures"></a>[Closures](#grug-on-closures)
+# <a name="grug-on-closures"></a>[クロージャ](#grug-on-closures)
 
-grug like closures for right job and that job usually abstracting operation over collection of objects
+クロージャにとって適切な仕事とは通常、オブジェクトのコレクションに対する操作を抽象化することである。
 
-grug warn closures like salt, type systems and generics: small amount go long way, but easy spoil things too much use
-give heart attack
+クロージャや型、ジェネリクスは塩のように少量ならば効果的だが、使いすぎると台無しになり心臓発作を起こす。
 
-javascript developers call very special complexity demon spirit in javascript "callback hell" because too much closure 
-used by javascript libraries very sad but also javascript developer get what deserved let grug be frank
+JavaScript開発者は非常に特殊な複雑さの悪霊を「コールバック地獄」と呼ぶ。JavaScriptライブラリでクロージャが使われすぎた結果の悲劇だが、率直に言わせてもらうと、それもJavaScript開発者が受けるべき報いだ。
 
-# <a name="grug-on-logging"></a>[Logging](#grug-on-logging)
+# <a name="grug-on-logging"></a>[ロギング](#grug-on-logging)
 
-grug huge fan of logging and encourage lots of it, especially in cloud deployed.  some non-grugs say logging expensive
-and not important.  grug used think this way no more
+原人はロギング愛好家であり、特にクラウド環境ではたくさん使うように推奨している。ロギングは高くつき重要ではないと非原人は言う。原人もかつてはそのように考えていたが、今はそう考えていない。
 
-funny story: grug learn idol [rob pike](https://en.wikipedia.org/wiki/Rob_Pike) working on logging at google and decide: 
-"if rob pike working on logging, what grug do there?!?" so not pursue.  turn out logging _very_ important to google so
-of course best programmer work on it, grug!  
+面白い話がある。原人はその昔、アイドル的存在の[ロブ・パイク](https://ja.wikipedia.org/wiki/%E3%83%AD%E3%83%96%E3%83%BB%E3%83%91%E3%82%A4%E3%82%AF)がGoogleでロギングに取り組んでいると知った。「ロブ・パイクがロギングをやっているなら、原人でそこに何をする必要があるんだ？！？」と追求するのをやめることにした。Googleにとってロギングは非常に重要な問題なので、当然最高のプログラマーが取り組んだわけだ！
 
-don't be such grug brain, grug, much less shiney rock now!
+原人頭になるべきではない、得られるピカピカ石の量をかなり減らしてしまった！
 
-oh well, grug end up at good company anyway and rob pike dress habit 
-[increasingly erratic](https://www.youtube.com/watch?v=KINIAgRpkDA), so all work out in end, but 
-point stand: logging very important!
+まあ、原人は結局良い会社に就職したし、ロブ・パイクの服装は[ますます変になっている](https://www.youtube.com/watch?v=KINIAgRpkDA)から結果オーライだが、要点は変わらない。ロギングは非常に重要だ！
 
-grug tips on logging are:
+原人のロギングに関するTips：
 
-* log all major logical branches within code (if/for)
-* if "request" span multiple machine in cloud infrastructure, include request ID in all so logs can be grouped
-* if possible make log level dynamically controlled, so grug can turn on/off when need debug issue (many!)
-* if possible make log level per user, so can debug specific user issue
+- コード内の主要なロジック分岐（if文やfor文など）はすべてログに記録すること
+- クラウド環境でリクエストが複数のマシンにまたがる場合、全ログにリクエストIDを含めてログをグループ化可能に
+- 可能ならログレベルを動的に制御可能にし、デバッグ時には原人がオン/オフできるように（とても多いので！）
+- 可能ならユーザーごとにログレベルを設定し、特定ユーザーの問題をデバッグ可能に
 
-last two points are especially handy club when fighting bugs in production systems very often
+最後の2つのポイントは、特に本番システムでバグと戦うときに非常に便利な道具になる。
 
-unfortunately log libraries often very complex (java, [why you do?](https://stackify.com/logging-java/)) but worth investing 
-time in getting logging infrastructure "just right" pay off big later in grug experience
+残念ながらロギングライブラリは非常に複雑になりがちだ。（Javaは、[なんであんなことに](https://stackify.com/logging-java/)？）しかしロギングのインフラを完璧に整えるための時間投資は、後々大きな見返りをもたらす（原人の経験談）。
 
-logging need taught more in schools, grug think
+ロギングは学校でもっと教えられるべきだ。原人はそう考えている。
 
-# <a name="grug-on-concurrency"></a>[Concurrency](#grug-on-concurrency)
+# <a name="grug-on-concurrency"></a>[同時実行性](#grug-on-concurrency)
 
-grug, like all sane developer, fear concurrency
+すべてのまともな開発者のように、原人も同時実行性を恐れている。
 
-as much as possible, grug try to rely on simple concurrency models like stateless web request handlers and simple
-remote job worker queues where jobs no interdepend and simple api
+可能な限り、ステートレスなWebリクエストハンドラや、ジョブ間に相互依存性がないシンプルなリモートジョブワーカーキュー、そして単純なAPIといった単純な並行処理モデルに頼るように努めている。
 
-[optimistic concurrency](https://en.wikipedia.org/wiki/Optimistic_concurrency_control) seem work well for web stuff
+ウェブの作業では、[楽観的同時実行制御](https://ja.wikipedia.org/wiki/%E6%A5%BD%E8%A6%B3%E7%9A%84%E4%B8%A6%E8%A1%8C%E6%80%A7%E5%88%B6%E5%BE%A1)はうまく機能するようだ。
 
-occasionally grug reach for [thread local variable](https://en.wikipedia.org/wiki/Thread-local_storage), usually when 
-writing framework code
+時折、通常はフレームワークコードを記述する際に、原人は[スレッド局所記憶](https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E5%B1%80%E6%89%80%E8%A8%98%E6%86%B6)を使用することがある。
 
-some language have good concurrent data structure, like java [ConcurrentHashMap](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html)
-but still need careful grug work to get right
+一部の言語は優れた並行データ構造を備えている（例えばJavaの[ConcurrentHashMap](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html)など）が、それでも正しく動作させるには注意深い作業が必要である。
 
-grug has never used [erlang](https://en.wikipedia.org/wiki/Erlang_(programming_language)), hear good things, but language 
-look wierd to grug sorry
+良い評判は聞いているが、原人は[Erlang](https://ja.wikipedia.org/wiki/Erlang)を使ったことがない。申し訳ないが言語としては奇妙に見える。
 
-# <a name="grug-on-optimizing"></a>[Optimizing](#grug-on-optimizing)
+# <a name="grug-on-optimizing"></a>[最適化](#grug-on-optimizing)
 
-ultra biggest of brain developer once say:
+[究極的な賢い頭の開発者](https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%8A%E3%83%AB%E3%83%89%E3%83%BB%E3%82%AF%E3%83%8C%E3%83%BC%E3%82%B9)はかつて言った。
 
-> premature optimization is the root of all evil
+> 時を得ない最適化は諸悪の根源なのであります。
 
-this everyone mostly know and grug in humble violent agreement with ultra biggest of big brain
+これはほぼすべての者が知っており、原人もその末席から激しく同意をする。原人は常に、最適化前に具体的な実機のパフォーマンスで特定の課題を設定することを推奨する。実際の問題が何かは予測不能であり、原人もよく驚く！非常に頻繁に！
 
-grug recommend always to have concrete, real world perf profile showing specific perf issue before begin optimizing.  
+CPU偏重に注意してほしい。学校でCPU計測やビッグO記法ばかり学んだため見えやすいが、遅延の真因でないことが多く、原人を含め多くの者を驚かせる。
 
-never know what actual issue might be, grug often surprise!  very often!
+ネットワーク遅延は数百万CPUサイクルに相当する。可能な限り最小化すべきだ。賢い頭のマイクロサービス開発者よ、肝に銘じてほしい！
 
-beware only cpu focus: easy to see cpu and much big o notation thinking having been done in school,
-but often not root of all slowness, surprise to many including grug
+未経験の賢い頭の開発者はネストしたループを見て「O(n^2)？私の前では許されない！」と叫ぶ。
 
-hitting network equivalent of many, many millions cpu cycle and always to be minimized if possible, note well big brain
-microservice developer!
+複雑さの悪霊はそれを見てほくそ笑む。
 
-inexperienced big brain developer see nested loop and often say "O(n^2)?  Not on my watch!"
+# <a name="grug-on-apis"></a>[API](#grug-on-apis)
 
-complexity demon spirit smile
+原人は良いAPIを好む。良いAPIは原人に余計な頭を使わせない。
 
-# <a name="grug-on-apis"></a>[APIs](#grug-on-apis)
+残念ながら多くのAPIはひどく、原人をかなり考え込ませる。これには多くの理由があるが、主な理由は二つである。
 
-grug love good apis.  good apis not make grug think too much
+1. API設計者が実装やドメインを重視しすぎていて、使う側のことを考えていない
+1. API設計者が抽象的に考えすぎて頭でっかちになっている
 
-unfortunately, many apis very bad, make grug think quite a bit.  this happen many reasons, here two:
+原人はAPIの詳細に興味はない。ファイル書き込みやソートがしたいだけで、ただ<code>write()</code>や<code>sort()</code>を呼びたいだけだ。
 
-* API creators think in terms of implementation or domain of API, rather than in terms of use of API
-* API creators think too abstract and big brained
+だが賢い頭のAPI開発者は言う。
 
-usually grug not care too deeply about detail of api: want write file or sort list or whatever, just want to call
-`write()` or `sort()` or whatever
+「慌てるな、原人！そのファイルは書き込みモードで開いたか？ソート用の<code>Comparator</code>は定義したか？」
 
-but big brain api developers say:
+原人はこん棒を取り出すのをじっと我慢する。
 
-"not so fast, grug!  is that file *open for write*? did you define a *Comparator* for that sort?"
+今はそんなことどうでもいい、ただソートとファイル書き込みがしたいだけだ！
 
-grug find self restraining hand reaching for club again
+賢い頭のAPI設計者にも一理あるかもしれないが、大抵は不要だ。複雑なケースのAPIとシンプルなケースのAPIは分けるべきだ。
 
-not care about that stuff right now, just want sort and write file mr big brain!
+異なる複雑さのレベルで2〜3種類のAPIを用意する、原人はこれを「階層化」と呼ぶ。
 
-grug recognize that big brain api designer have point and that _sometime_ these things matter, but often do not.
-big brain api developers better if design for simple cases with simple api, make complex cases possible
-with more complex api
+オブジェクト指向なら、APIは他の場所でなくオブジェクトに直接置くべきだ。Javaではこれが凶悪だ！
 
-grug call this "layering" apis: two or three different apis at different level complexity for various grug needs
+Javaでリストをフィルターにかけたい。
 
-also, if object oriented, put api on thing instead of elsewhere. java worst at this!  
+「<code>Stream</code>に変換しましたか？」
 
-grug want filter list in java
+しょうがない、<code>Stream</code>化しよう。
 
-"Did you convert it to a stream?"
+「ではフィルターできます」
 
-fine, grug convert to stream
+OK、しかしリストが欲しいのに<code>Stream</code>になってしまった！
 
-"OK, now you can filter."  
+「では、<code>Stream</code>を配列に<code>collect</code>しますか？」
 
-OK, but now need return list!  have stream!  
+は？
 
-"Well, did you collect your stream into a list?"
+「<code>Stream</code>を配列に<code>collect</code>するために<code>Collector</code>の<code><? super T, A, R></code>を定義してください」
 
-what?
+こいつらを撲殺してやることを祖霊の前で誓うが、一旦深呼吸しよう。
 
-"Define a Collector&lt;? super T, A, R&gt; to collect your stream into a list"
+<code>filter()</code>のような基本機能は配列に直接実装して配列を返すべきだ、Javaの賢い頭を持つ開発者！
 
-grug now swear on ancestor grave he club every single person in room, but count two instead and remain calm
+誰も<code>Stream</code>など知らない。ネットワークAPIではない、すべてのJava原人は配列を使っている！
 
-put common thing like `filter()` on list and make return list, listen well big brain java api developer!  
+# <a name="grug-on-parsing"></a>[パース](#grug-on-parsing)
 
-nobody care about "stream" or even hear of "stream" before, is not networking api, all java grugs use list mr big brain!  
+原人は即席でプログラミング言語を作るのが大好きで、[再帰下降パーサー](https://ja.wikipedia.org/wiki/%E5%86%8D%E5%B8%B0%E4%B8%8B%E9%99%8D%E6%A7%8B%E6%96%87%E8%A7%A3%E6%9E%90)はパーサーを作る最も楽しく美しい方法だと主張したい。
 
-# <a name="grug-on-parsing"></a>[Parsing](#grug-on-parsing)
+残念ながら多くの大学ではパーサージェネレーターだけ教える。原人が普段愛用する道具とは違う。パーサージェネレーターは理解不能な蛇の巣のようなコードを生成する。文法の再帰性を隠しデバッグは不可能、最悪だ！
 
-grug love make programming language at drop of hat and 
-say [recursive descent](https://en.wikipedia.org/wiki/Recursive_descent_parser)
-most fun and beautiful way create parser
+考えるに、悲しい真実ではあるが、複雑さの悪霊はコードベースには有害だが、学術論文の量産には有益だ。
 
-unfortunately many big brain school teach only parser generator tool.  here grug usual love of tool is not: parser 
-generator tool generate code of awful snakes nest: impossible understand, bottom up, what?  hide recursive nature of 
-grammar from grug and debug impossible, very bad according grug!
+学校では無視されるが、現場のパーサーはほぼ常に再帰下降だ！パースがどれほどシンプルにできるか気付いて原人は激怒した！パースは賢い頭だけの魔法ではない、君にもできる！
 
-grug think this because while complexity demon bad for code base and understand, complexity demon very good for generation
-of much academic papers, sad but true
+ロバート・ナイストロームという賢い頭の開発者が[『インタプリタの作り方』](https://craftinginterpreters.com/)という再帰下降の素晴らしい解説書を書いて賢い頭氏族の名誉を取り戻したのを見て原人は喜んでいる。
 
-production parser almost always recursive descent, despite ignore by schools!  grug furious when learn how simple parse 
-is! parsing not big brain only magic: so can you!
+本はオンライン上に無料で公開されているが、興味がある原人には購入することを強くお勧めする。優れた知見を提供してくれて、原人の愛読書となるだろう。ただしVisitorパターンだけは別だ！
 
-grug very elated find big brain developer Bob Nystrom redeem the big brain tribe and write excellent book on recursive
-descent: [Crafting Interpreters](https://craftinginterpreters.com/)
+# <a name="grug-on-visitor-pattern"></a>[Visitorパターン](#grug-on-visitor-pattern)
 
-book available online free, but grug highly recommend all interested grugs purchase book on general principle, provide
-much big brain advice and grug love book _very_ much except visitor pattern (trap!)
+[悪い。](https://ja.wikipedia.org/wiki/Visitor_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3) 
 
-# <a name="grug-on-visitor-pattern"></a>[The Visitor Pattern](#grug-on-visitor-pattern)
+# <a name="grug-on-front-end-development"></a>[フロントエンド開発](#grug-on-front-end-development)
 
-[bad](https://en.wikipedia.org/wiki/Visitor_pattern) 
+一部の非原人は、ウェブ開発に直面してこう言う。
 
-# <a name="grug-on-front-end-development"></a>[Front End Development](#grug-on-front-end-development)
+「わかっているよ。フロントエンドとバックエンドを分離する。それから、イケてる新しいSPAライブラリを使って、HTTPを通してAPIからGraphQLで通信してJSONを受け取るんだ」(ここでおもしろいのはハイパーテキストに変換していないことだ)
 
-some non-grugs, when faced with web development say: 
+そうして二匹の複雑さの悪霊が潜む巣窟が生まれる。
 
-"I know, I'll split my front end and back end codebase up and use a hot new SPA library talking to a GraphQL JSON API back end
-over HTTP (which is funny because I'm not transferring hypertext)"
+さらに悪いことに、フロントエンドの複雑さの悪霊は強大であり、その精神汚染は原人が知る限りのフロントエンド業界すべてに広がっている。
 
-now you have two complexity demon spirit lairs
+バックエンド開発者は物事をシンプルに保とうとし、うまく機能することもあるが、フロントエンド開発者はすぐ複雑なものを作り、複雑さの悪霊のコードを量産する。
 
-and, what is worse, front end complexity demon spirit even more powerful and have deep spiritual hold on entire front end
-industry as far as grug can tell
+フォームでデータベースに送信するだけのサイトや簡単なパンフレットサイトでもだ！
 
-back end developers try keep things simple and can work ok, but front end developers make very complex very quickly and 
-introduce lots of code, demon complex spirit
+今まさにこのときも、みんながこれをやってやる！
 
-even when website just need put form into database or simple brochure site!  
+原人はなぜそうなっているのかわからない。おそらく、FacebookやGoogleがそう言っているからだろうが、それはそうする理由としてふさわしいものだとは原人は思わない。
 
-everyone do this now!  
+原人はそれを避けるために[htmx](https://htmx.org/)と[hyperscript](https://hyperscript.org/)を作っている。
 
-grug not sure why except maybe facebook and google say so, but that not seem very good reason to grug
+複雑さを抑え、HTMLをシンプルにしてくれて、JavaScriptが増殖するのを避ける、複雑さの悪霊への聖水。
 
-grug not like big complex front end libraries everyone use
+機能はするが、仕事のポストはないかもしれない、申し訳ない。
 
-grug make [htmx](https://htmx.org) and [hyperscript](https://hyperscript.org) to avoid
+就職といくつかのタイプのアプリケーションにはReactの方が適しているかもしれないが、好む好まざるにかかわらずあなたを複雑さの悪霊の邪教徒にする。それがフロントエンド人生である。
 
-keep complexity low, simple HTML, avoid lots javascript, the natural ether of spirit complexity demon
+# <a name="grug-on-fads"></a>[流行](#grug-on-fads)
 
-maybe they work for you, but no job post, sorry
+原人は開発における多くの流行、特に現代のフロントエンド開発におけるものに注目している。
 
-react better for job and also some type application, but also you become alcolyte of complexity demon whether you like 
-or no, sorry such is front end life
+バックエンドはまだマシで退屈である。現時点で悪いアイディアはもうやり尽くされているからだ。(それでもまだそのいくつかはまた試してみようとされる！)
 
-# <a name="grug-on-fads"></a>[Fads](#grug-on-fads)
+フロントエンドではいまだにすべての悪いアイディアが試され、変化は激しく理解するのは難しい。
 
-grug note lots of fads in development, especially front end development today
+原人は新しい革命的アプローチには眉に唾をつけて見ることを勧める。賢い頭たちは長年研究していて、ほとんどのアイディアはコンピュータ上で既に試されている。
 
-back end better more boring because all bad ideas have tried at this point maybe (still retry some!)
+原人は新しいトリックを学習することは否定しないし、新しく優れたアイディアが存在しないとも言わない。しかし、リサイクルされた悪いアイディアで時間を浪費し、それをコードベースに無造作に投げ入れることから複雑さの悪霊が持つ魔力の多くは生まれる。
 
-still trying all bad ideas in front end development so still much change and hard to know
+# <a name="grug-on-fold"></a>[バカに見えることへの恐れ](#grug-on-fold)
 
-grug recommend taking all revolutionary new approach with grain salt: big brains have working for long 
-time on computers now, most ideas have tried at least once
+シニア原人が大っぴらに「うーん、これは複雑すぎる」と言ってくれれば非常に良い！
 
-grug not saying can't learn new tricks or no good new ideas, but also much of time wasted on recycled bad ideas, lots of
-spirit complexity demon power come from putting new idea willy nilly into code base
+多くの開発者はバカに見られることへの恐怖症（Fear Of Looking Dumb - FOLD）を抱えている。原人もかつてFOLDだったが、克服した。シニア原人が「これは複雑すぎて混乱する」と認めることは極めて重要だ。
 
-# <a name="grug-on-fold"></a>[Fear Of Looking Dumb](#grug-on-fold)
+これによりジュニア原人も複雑さを認め理解できないと言い出しやすくなる。実際にそのようなケースはよくある。FOLDは開発者、特に若い原人を支配する複雑さの悪霊が持つ力の源だ！
 
-note!  very good if senior grug willing to say publicly: "hmmm, this too complex for grug"!
+FOLDの力を奪い取れる、シニア原人のそのような行為は素晴らしい！
 
-many developers Fear Of Looking Dumb (FOLD), grug also at one time FOLD, but grug learn get over: very important senior 
-grug say "this too complicated and confuse to me"
+注：必ずしかつめらしい顔を作り、賢い頭に見えるように言うこと。賢い頭か、より悪いことに(そちらの方が多いが)自分を賢い頭だと思い込んでいる人から陰口をたたかれる。
 
-this make it ok for junior grugs to admit too complex and not understand as well, often such case!  FOLD major source of 
-complexity demon power over developer, especially young grugs!  
+強くあれ！FOLDであるな！
 
-take FOLD power away, very good of senior grug!
+こん棒は時には役立つが、ユーモアのセンスや賢い頭がこの前に失敗したプロジェクトの話はもっと役に立つ、集めて取っておくべきだ。
 
-note: important to make thinking face and look big brained when saying though.  be prepare for big brain or, worse and
-much more common, *thinks* is big brain to make snide remark of grug
+# <a name="grug-on-imposter-syndrom"></a>[インポスター症候群](#grug-on-imposter-syndrom)
 
-be strong! no FOLD!  
+開発現場では多くの人が自分はインポスターであると感じている。 
 
-club sometimes useful here, but more often sense of humor and especially last failed project by big brain very useful, 
-so collect and be calm
+全知全能の支配者となりソーのようにコードのムジョルニアを振り回すか、あるいは自分が何をしているか全くわかっていないか、人は常にそのいずれかである。
 
-# <a name="grug-on-imposter-syndrom"></a>[Impostor Syndrome](#grug-on-imposter-syndrom)
+原人は大抵後者の状態だが、それをうまく隠している。多くの業務用のソフトウェアを作り[OSSでそこそこの成功](https://www.star-history.com/#bigskysoftware/htmx&bigskysoftware/_hyperscript&Date)を収めた。いまだに「何もわかっていない」と感じることはよくある！とても頻繁に！コードを壊し同僚の原人を失望させないかとおびえている！このインポスターめ！
 
-grug note many such impostor feels in development
+ほとんどの原人にとってプログラミングの本質とは多分、インポスターであるという感覚を抱き、それでいいんだと思うことだ。皆がインポスターであるなら誰もインポスターではないのだ。
 
-always grug one of two states: grug is ruler of all survey, wield code club like thor OR grug have no idea what doing
+ここまで読んでくれた若い原人よ、悪いが常に不安や心配は付きまとう。それでもプログラマーとしてやっていける。
 
-grug is mostly latter state most times, hide it pretty well though
+# <a name="grug-reads"></a>[読み物](#grug-reads)
 
-now, grug make softwares of much work and [moderate open source success](https://star-history.com/#bigskysoftware/htmx&bigskysoftware/_hyperscript&Date)
-, and yet grug himself often feel not any idea what doing!  very often!  grug still fear make mistake break everyone code and 
-disappoint other grugs, imposter!
+原人は以下の読み物を推奨する。
 
-is maybe nature of programming for most grug to feel impostor and be ok with is best: nobody imposter if everybody imposter
-
-any young grug read this far probably do fine in program career even if frustrations and worry is always to be there, sorry
-
-# <a name="grug-reads"></a>[Reads](#grug-reads)
-
-grug like these:
-
-* [Worse is Better](https://www.dreamsongs.com/WorseIsBetter.html)
+* [Worse Is Better](https://www.dreamsongs.com/WorseIsBetter.html)
 * [Worse is Better is Worse](https://www.dreamsongs.com/Files/worse-is-worse.pdf)
 * [Is Worse Really Better?](https://www.dreamsongs.com/Files/IsWorseReallyBetter.pdf)
 * [A Philosophy of Software Design](https://www.goodreads.com/en/book/show/39996759-a-philosophy-of-software-design)
 
-# <a name="lol-lmao"></a>[Conclusion](#lol-lmao)
+# <a name="lol-lmao"></a>[結論](#lol-lmao)
 
-_you_ say: complexity *very*, *very* bad
+_あなた_ は言う。複雑さは*とてもとても*悪い。
